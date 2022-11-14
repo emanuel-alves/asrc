@@ -16,7 +16,7 @@ function asrc() {
         while IFS="," read -r name local; do
             if [ $name = $1 ]; then
                 echo "ERROR: "$1" já existe"
-                exit 1
+                return 1
             fi
         done <$DATA_FILE
 
